@@ -1,0 +1,94 @@
+<canvas id='canvas'>
+<script>
+/*function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    
+    var ctx = canvas.getContext('2d');
+    
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "#00f";
+    ctx.ellipse(60, 125, 60, 10, 0, 0, 2*Math.PI, true);
+    ctx.fillStyle='#09F';
+    ctx.fill();
+    ctx.stroke();
+    
+    ctx.beginPath();
+    ctx.moveTo(60, 40);
+    ctx.lineTo(1, 100);
+    ctx.lineTo(120, 100);
+    ctx.fillStyle="#010F";
+    ctx.fill();
+    ctx.endPath();
+    
+    //////////////////////////////////////////////////////////////////////
+    
+  ctx.beginPath();
+    ctx.moveTo(70, 40);
+    ctx.lineTo(11, 100);
+    ctx.lineTo(130, 100);
+    ctx.fillStyle="#010F";
+    ctx.fill();
+    ctx.endPath();
+  
+  ctx2.lineWidth = 5;
+    ctx.strokeStyle = "#00f";
+    ctx.ellipse(60, 125, 60, 10, 0, 0, 2*Math.PI, true);
+    ctx.fillStyle='#09F';
+    ctx.fill();
+    ctx.stroke();
+    
+   
+    
+    
+  }
+}*/
+function draw() {
+  if (canvas.getContext) {
+  var ctx = canvas.getContext('2d');
+  
+  
+  ctx.beginPath();
+      ctx.moveTo(60, 20);
+      ctx.lineTo(35, 105);
+      ctx.lineTo(85, 105);
+      ctx.fill();
+      
+      var circle = new Path2D();
+    circle.arc(60, 135, 25, 0, 2 * Math.PI);
+    ctx.fillStyle='#09F';
+    ctx.fill(circle);
+    ctx.restore();
+  
+  //////////////////////////////////////////////////////////////////////////
+  ctx.beginPath();
+      ctx.moveTo(125, 40);
+      ctx.lineTo(100, 125);
+      ctx.lineTo(150, 125);
+      ctx.fillStyle='#010F';
+      ctx.fill();
+      
+      var circle = new Path2D();
+    circle.arc(125, 125, 25, 0, 2 * Math.PI);
+    ctx.fillStyle='#09F';
+    ctx.fill(circle);
+    ctx.restore();
+  /////////////////////////////////////////////////////////////////////////
+   	ctx.translate(200, -15);
+	ctx.rotate((Math.PI/180)*25);
+      ctx.beginPath();
+      ctx.moveTo(60, 40);
+      ctx.lineTo(35, 125);
+      ctx.lineTo(85, 125);
+      ctx.fillStyle='#010F';
+      ctx.fill();
+      
+      var circle = new Path2D();
+    circle.arc(60, 125, 25, 0, 2 * Math.PI);
+    ctx.fillStyle='#09F';
+    ctx.fill(circle);
+    //ctx.restore();
+  }
+}
+draw();
+</script>
